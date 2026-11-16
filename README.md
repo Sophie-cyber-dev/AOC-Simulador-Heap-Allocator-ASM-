@@ -31,4 +31,43 @@ Para compilar e executar o simulador, você precisará do **Turbo Assembler (TAS
 
 1. Compile o código-fonte para gerar o arquivo objeto (`.OBJ`):
    ```batch
-   tasm heap_visual.asm
+   main.asm
+
+2. Realize a linkedição para gerar o executável (.EXE):
+tlink heap_visual.obj
+
+3. Execute o programa:
+main.exe
+
+🖥️ Exemplo de Saída no Terminal
+Durante a execução, o simulador exibe a transição dos blocos na memória passo a passo:
+
+Plaintext
+=== INICIANDO SIMULADOR VISUAL DE HEAP (256 BYTES) ===
+--- MAPA DO HEAP NA MEMORIA ---
+[ Tamanho: 253 | STATUS: LIVRE ] -> FIM DO HEAP
+
+[ACAO] Solicitada alocacao de bytes.
+--- MAPA DO HEAP NA MEMORIA ---
+[ Tamanho: 40 | STATUS: OCUPADO ] -> [ Tamanho: 210 | STATUS: LIVRE ] -> FIM DO HEAP
+
+[ACAO] Solicitada alocacao de bytes.
+--- MAPA DO HEAP NA MEMORIA ---
+[ Tamanho: 40 | STATUS: OCUPADO ] -> [ Tamanho: 60 | STATUS: OCUPADO ] -> [ Tamanho: 147 | STATUS: LIVRE ] -> FIM DO HEAP
+
+[ACAO] Solicitada liberacao de bloco (Free).
+--- MAPA DO HEAP NA MEMORIA ---
+[ Tamanho: 40 | STATUS: LIVRE ] -> [ Tamanho: 60 | STATUS: OCUPADO ] -> [ Tamanho: 147 | STATUS: LIVRE ] -> FIM DO HEAP
+
+👥 Equipe
+
+- Sophia Maria Vieira Galvão
+
+- Luiz Eduardo Cok Santos de Melo
+
+- Jonh Farley Santos Silva
+
+📚 Referências Bibliográficas
+PATTERSON, David A.; HENNESSY, John L. Organização e Projeto de Computadores: A Interface Hardware/Software.
+
+STALLINGS, William. Arquitetura e Organização de Computadores.
