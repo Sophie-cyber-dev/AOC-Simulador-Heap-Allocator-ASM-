@@ -68,6 +68,7 @@ Plaintext
 - Jonh Farley Santos Silva
 
 📚 Referências Bibliográficas
+
 PATTERSON, David A.; HENNESSY, John L. Organização e Projeto de Computadores: A Interface Hardware/Software.
 
 STALLINGS, William. Arquitetura e Organização de Computadores.
